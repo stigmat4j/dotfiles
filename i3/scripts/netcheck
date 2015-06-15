@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Author: Raphael P. Ribeiro <raphaelpr01@gmail.com> 
+
+ISON=$(ping -q -w 1 -c 1 `ip r | grep default | head -n 1 | cut -d ' ' -f 3` > /dev/null && echo ON || echo OFF) # IS ON?
+echo ""
+echo
+echo \#2ecc71
+if [ "$ISON" = "OFF" ]; then # no internet? color will turn red
+  echo ""
+  echo
+  echo \#e74c3c
+fi

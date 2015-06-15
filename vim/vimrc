@@ -1,0 +1,146 @@
+set nocp
+
+silent! runtime plugins.vim
+silent! runtime mapping.vim
+
+set nobackup
+set history=1000
+set nowritebackup
+set noswapfile
+set autoread
+
+" set paste
+set title
+set encoding=utf-8
+set scrolloff=3
+set showcmd
+set wildmenu
+set hidden
+set wildmenu
+set wcm=<TAB>
+set wildmode=list:longest,full
+set visualbell
+set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+set noundofile
+
+set wildignore+=*/bower_components/*,*/node_modules/*
+
+" Props for hightlight serach results
+set incsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+
+set autoindent
+set smartindent
+set smarttab
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" set list
+" set listchars=tab:··,trail:·,extends:ॱ
+"Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+" GUI Options
+if has('gui')
+  set guioptions-=r
+  set guioptions-=R
+  set guioptions-=b
+  set guioptions-=l
+  set guioptions-=L
+  set guioptions-=T
+  set guioptions-=m
+  set guioptions-=e
+  " set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 9
+  set guifont=Dejavu\ Sans\ Mono\ for\ Powerline\ 9
+endif
+
+" Theme properties
+colorscheme solarized
+" let g:solarized_bold=0    "default value is 1
+let g:solarized_termcolors=256    "default value is 16
+let g:solarized_contrast="high"    "default value is normal
+set background=dark
+
+" Theme properties
+" Airline
+let g:airline_theme = 'badwolf'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_powerline_fonts = 1
+" let g:airline_left_sep = ''
+" let g:airline_right_sep = ''
+
+let g:airline_enable_fugitive=1
+let g:airline_enable_syntastic=1
+let g:airline_enable_bufferline=1
+
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#fnamemod = ':t'"
+
+" Auto Pair
+" let g:AutoPairsFlymode = 1
+" let g:AutoPairsShortcutbackinsert = '<M-b>'
+
+" Syntastic
+let g:syntastic_enable_signs=1
+
+"Property for emmet
+let g:user_emmet_install_global = 1
+let g:user_emmet_expandabbr_key = '<c-r>'
+let g:use_emmet_complete_tag = 1
+autocmd FileType html,css EmmetInstall
+
+" NERDTree
+let NERDTreeShowBookmarks = 0
+let NERDChristmastree = 1
+let NERDTreeWinPos = "left"
+let NERDTreeHijacknetrw = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeWinSize = 60
+let NERDTreeChDirmode = 2
+let NERDTreeDirArrows = 1
+let NERDTreeIgnore = ['\node_modules$']
+
+let g:indent_guides_auto_colors = 1
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
+
+" CtrlP
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|build\|'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|node_modules\|jspm_packages'
+
+" Auto Pair
+let g:AutoPairsFlymode = 1
+let g:AutoPairsShortcutbackinsert = '<M-b>'
+
+let coffee_indent_keep_current = 1
+" autocmd FileType litcoffee runtime ftplugin/coffee.vim
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+
+set completeopt=menu,menuone,longest
+set pumheight=15
+" SuperTab option for context aware completion
+let g:SuperTabDefaultCompletionType = "context"
+
+" Disable auto popup, use <Tab> to autocomplete
+let g:clang_complete_auto = 1
+" Show clang errors in the quickfix window
+let g:clang_complete_copen = 1
+
+au InsertLeave *.css :BLReloadCSS
+au InsertLeave *.html :BLReloadPage
+au InsertLeave *.less :BLReloadCSS
+au InsertLeave *.coffee :BLReloadPage
+
+autocmd! bufwritepost vimrc source %
+autocmd! bufwritepost .vimrc source %

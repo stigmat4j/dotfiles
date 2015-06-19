@@ -46,4 +46,5 @@ Plug 'maksimr/vim-jsbeautify'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'KabbAmine/gulp-vim'
 Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()

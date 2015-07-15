@@ -27,6 +27,7 @@ set backspace=indent,eol,start
 set laststatus=2
 set relativenumber
 set noundofile
+set ignorecase
 
 set wildignore+=*/bower_components/*,*/node_modules/*
 
@@ -63,7 +64,7 @@ if has('gui')
 endif
 
 " Theme properties
-colorscheme solarized
+colorscheme PaperColor
 " let g:solarized_bold=0    "default value is 1
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_contrast="high"    "default value is normal
@@ -71,7 +72,7 @@ set background=dark
 
 " Theme properties
 " Airline
-let g:airline_theme = 'badwolf'
+let g:airline_theme = 'PaperColor'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -137,10 +138,8 @@ let g:clang_complete_auto = 1
 " Show clang errors in the quickfix window
 let g:clang_complete_copen = 1
 
-au InsertLeave *.css :BLReloadCSS
-au InsertLeave *.html :BLReloadPage
-au InsertLeave *.less :BLReloadCSS
-au InsertLeave *.coffee :BLReloadPage
-
 autocmd! bufwritepost vimrc source %
 autocmd! bufwritepost .vimrc source %
+let g:PaperColor_Light_CursorLine = "#dfdfff"
+
+" let g:indentLine_color_gui = '#A4E57E'

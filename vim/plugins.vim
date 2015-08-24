@@ -34,5 +34,6 @@ Plug '29decibel/codeschool-vim-theme'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'kien/ctrlp.vim'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'marijnh/tern_for_vim'
+Plug 'wavded/vim-stylus'
+Plug 'abra/vim-abra'
 call plug#end()

@@ -64,9 +64,10 @@ if has('gui')
 endif
 
 " Theme properties
-colorscheme PaperColor
+colorscheme abra"solarized PaperColor
 " let g:solarized_bold=0    "default value is 1
 let g:solarized_termcolors=256    "default value is 16
+let g:solarized_termtrans = 1
 let g:solarized_contrast="high"    "default value is normal
 set background=dark
 
@@ -84,7 +85,7 @@ let g:airline_enable_fugitive=1
 let g:airline_enable_syntastic=1
 let g:airline_enable_bufferline=1
 
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'"
 
 " Auto Pair
@@ -93,6 +94,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'"
 
 " Syntastic
 let g:syntastic_enable_signs=1
+" let g:syntastic_javascript_checkers = ['eslint']
 
 "Property for emmet
 let g:user_emmet_install_global = 1

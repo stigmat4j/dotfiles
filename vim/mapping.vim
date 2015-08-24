@@ -34,8 +34,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Switch between buffers
-noremap <tab> :bn<CR>
-noremap <S-tab> :bp<CR>
+noremap <C-j> :bn<CR>
+noremap <C-k> :bp<CR>
 " close buffer
 nmap <leader>d :bd<CR>
 " close all buffers

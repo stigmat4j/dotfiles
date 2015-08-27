@@ -36,4 +36,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'wavded/vim-stylus'
 Plug 'abra/vim-abra'
+Plug 'mhumeSF/one-dark.vim'
+Plug 'blackgate/tropikos-vim-theme'
 call plug#end()

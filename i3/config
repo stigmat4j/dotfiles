@@ -5,11 +5,23 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-exec --no-startup-id xrandr --output eDP1 --primary --auto --above HDMI1
+# exec --no-startup-id xrandr --output eDP1 --primary --auto --above HDMI1
 set $OUTPUT_E eDP1
 set $OUTPUT_I HDMI1
 set $i3_path /home/max/.i3
 set $pictures_folder /home/max/Pictures
+
+# workspaces
+set $w1
+set $w2
+set $w3
+set $w4
+set $w5
+set $w6
+set $w7
+set $w8
+set $w9
+set $w0
 
 # i3 config file (v4)
 #
@@ -17,7 +29,7 @@ set $pictures_folder /home/max/Pictures
 
 set $mod Mod4
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:DejaVu Sans Mono 8, FontAwesome 8
+font pango:DejaVu Sans Mono for Powerline 8, FontAwesome 8
 bindsym $mod+m bar hidden_state toggle
 
 # Toggle between hide state and show state
@@ -232,7 +244,7 @@ bar {
 	status_command i3blocks -c ~/.i3/i3blocks.conf
 	position top
 	colors {
-	  background #152834
+	  background #1d1f21
 	  focused_workspace  #BB9607 #BB9607 #000000
 	  active_workspace   #000000 #264348 #ffffff
 	  inactive_workspace #152834 #152834 #666666
@@ -247,6 +259,6 @@ client.urgent           #2f343a #900000 #ffffff #900000
 
 # Startup section
 exec --no-startup-id feh --bg-scale $HOME/.i3/bg.jpg
-exec xrandr --output $OUTPUT_E --auto --above $OUTPUT_I
+exec xrandr --output $OUTPUT_E --auto --above $OUTPUT_I --mode 1366x768 --pos 1366x --rotate normal
 workspace "" output $OUTPUT_E
 workspace "" output $OUTPUT_I

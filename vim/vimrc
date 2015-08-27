@@ -12,6 +12,7 @@ set autoread
 " set paste
 set title
 set encoding=utf-8
+set term=xterm-256color
 set scrolloff=3
 set showcmd
 set wildmenu
@@ -59,13 +60,12 @@ if has('gui')
   set guioptions-=T
   set guioptions-=m
   set guioptions-=e
-  " set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 9
   set guifont=Dejavu\ Sans\ Mono\ for\ Powerline\ 9
 endif
 
 " Theme properties
 colorscheme abra"solarized PaperColor
-" let g:solarized_bold=0    "default value is 1
+let g:solarized_bold=0    "default value is 1
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_termtrans = 1
 let g:solarized_contrast="high"    "default value is normal

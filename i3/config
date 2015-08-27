@@ -63,10 +63,10 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Shift+Return exec xterm
-bindsym $mod+Shift+Return exec xterm -name terminal_float
+bindsym $mod+Shift+Return exec urxvt -name terminal_float
 for_window [instance="^terminal_float$"] floating enable
 
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec urxvt 
 # bindsym $mod+c exec chromium
 # bindsym $mod+s exec skype
 

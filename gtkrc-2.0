@@ -1,8 +1,8 @@
-gtk-icon-theme-name = "Humanity"
+gtk-icon-theme-name = "AwOken"
 gtk-theme-name = "Turquoise Nights II"
-gtk-font-name = "Inconsolas 10"
+gtk-font-name = "DejaVu Sans Mono for Powerline 10"
 
 style "vimfix" {
-  bg[NORMAL] = "#262626"
+  bg[NORMAL] = "#252c31"
 }
 widget "vim-main-window.*GtkForm" style "vimfix"

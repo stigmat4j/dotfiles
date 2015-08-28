@@ -22,7 +22,7 @@ imap jj <ESC>
 
 " System Buffer Copy Paste
 nnoremap <F7> "+yy
-nnoremap <F8> "+p
+noremap <F8> :set paste!<CR>
 
 " Auto format
 map === mmgg=G`m^zz
@@ -34,8 +34,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Switch between buffers
-noremap <C-j> :bn<CR>
-noremap <C-k> :bp<CR>
+noremap <Tab> :bn<CR>
+noremap <C-Tab> :bp<CR>
 " close buffer
 nmap <leader>d :bd<CR>
 " close all buffers
@@ -69,7 +69,7 @@ vnoremap / /\v
 map <leader> <Plug>(easymotion-prefix)
 
 " Properties for TagBar plugin
-nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarToggle<CR>
 
 
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>

@@ -9,6 +9,9 @@ set nowritebackup
 set noswapfile
 set autoread
 
+set noautoindent
+set nosmartindent
+
 " set paste
 set title
 set encoding=utf-8
@@ -37,8 +40,8 @@ set incsearch
 set hlsearch
 let g:incsearch#auto_nohlsearch = 1
 
-set autoindent
-set smartindent
+" set autoindent
+" set smartindent
 set smarttab
 set tabstop=2
 set shiftwidth=2
@@ -113,9 +116,9 @@ let NERDTreeChDirmode = 2
 let NERDTreeDirArrows = 1
 let NERDTreeIgnore = ['\node_modules$']
 
-let g:indent_guides_auto_colors = 1
-hi IndentGuidesOdd  ctermbg=black
-hi IndentGuidesEven ctermbg=darkgrey
+" let g:indent_guides_auto_colors = 1
+" hi IndentGuidesOdd  ctermbg=black
+" hi IndentGuidesEven ctermbg=darkgrey
 
 " CtrlP
 " let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|build\|'
@@ -125,7 +128,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|node_modules\|jspm_pac
 let g:AutoPairsFlymode = 1
 let g:AutoPairsShortcutbackinsert = '<M-b>'
 
-let coffee_indent_keep_current = 1
+" let coffee_indent_keep_current = 1
 " autocmd FileType litcoffee runtime ftplugin/coffee.vim
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript

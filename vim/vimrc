@@ -67,7 +67,7 @@ if has('gui')
 endif
 
 " Theme properties
-colorscheme tropikos"onedark PaperColor abra solarized PaperColor
+colorscheme PaperColor "solarized tropikos onedark PaperColor abra solarized PaperColor
 let g:solarized_bold=0    "default value is 1
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_termtrans = 1
@@ -76,7 +76,7 @@ set background=dark
 
 " Theme properties
 " Airline
-let g:airline_theme = 'PaperColor'
+let g:airline_theme = 'papercolor'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif

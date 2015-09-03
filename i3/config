@@ -49,14 +49,8 @@ bindsym $mod+Print exec scrot -e 'mv $f $pictures_folder/Scrot/$f && gimp $pictu
 bindsym $mod+Mod1+Print exec scrot -u -e 'mv $f $pictures_folder/Scrot/$f && gimp $pictures_folder/Scrot/$f'
 
 # Set the bar instance with id 'bar-1' to always stay hidden
-# xfce4-notify
-for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
 for_window [window_role="pop-up"] floating enable
 for_window [class="notify"] floating enable border 1pixel
-# shutdown menu
-bindsym $mod+Shift+p exec xfce4-session-logout
-# xfce settings
-bindsym $mod+Shift+s exec xfce4-settings-manager
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -186,8 +180,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+w exec "i3-nagbar -t warning -m 'You pressed the shutdown shortcut. Do you really want to shutdown?' -b 'Yes, shutdown!' 'systemctl poweroff'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -b 'Exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+w exec "i3-nagbar -t warning -m 'Do you really want to shutdown?' -b 'Shutdown!' 'systemctl poweroff'"
+bindsym $mod+Shift+s exec "i3-nagbar -t warning -m 'Do you really want to suspend?' -b 'Suspend!' 'systemctl suspend'"
 
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
@@ -260,6 +255,7 @@ client.urgent           #2f343a #900000 #ffffff #900000
 # Startup section
 exec --no-startup-id feh --bg-scale $HOME/.i3/bg.jpg
 exec xrandr --output $OUTPUT_E --auto --above $OUTPUT_I
-workspace "" output $OUTPUT_E
-workspace "" output $OUTPUT_I
+# workspace "" output $OUTPUT_E
+# workspace "" output $OUTPUT_I
+# workspace "" output $OUTPUT_E
 

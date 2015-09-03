@@ -38,4 +38,6 @@ Plug 'wavded/vim-stylus'
 Plug 'abra/vim-abra'
 Plug 'mhumeSF/one-dark.vim'
 Plug 'blackgate/tropikos-vim-theme'
+Plug 'airblade/vim-gitgutter'
+Plug 'jeetsukumaran/vim-buffergator'
 call plug#end()

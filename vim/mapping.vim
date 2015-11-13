@@ -34,10 +34,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Switch between buffers
-noremap <Tab> :bn<CR>
-noremap <C-Tab> :bp<CR>
+noremap <TAB> :bn<CR>
+noremap <C-k> :bp<CR>
 " close buffer
-nmap <leader>d :bd<CR>
+nmap <leader>d :bwipeout<CR>
 " close all buffers
 nmap <leader>D :bufdo bd<CR>
 " Switch between last two buffers

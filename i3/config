@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-exec --no-startup-id xrandr --output eDP1 --primary --auto --above HDMI1
+# exec --no-startup-id xrandr --output eDP1 --primary --auto --above HDMI1
 set $OUTPUT_E eDP1
 set $OUTPUT_I HDMI1
 set $i3_path /home/max/.i3
@@ -254,7 +254,8 @@ client.urgent           #2f343a #900000 #ffffff #900000
 
 # Startup section
 exec --no-startup-id feh --bg-scale $HOME/.i3/bg.jpg
-exec xrandr --output $OUTPUT_E --auto --above $OUTPUT_I
+# exec xrandr --output $OUTPUT_E --auto --above $OUTPUT_I
+exec --no-startup-id xrandr --output $OUTPUT_E --auto --left-of $OUTPUT_I
 # workspace "" output $OUTPUT_E
 # workspace "" output $OUTPUT_I
 # workspace "" output $OUTPUT_E

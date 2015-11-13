@@ -67,7 +67,7 @@ if has('gui')
 endif
 
 " Theme properties
-colorscheme PaperColor "solarized tropikos onedark PaperColor abra solarized PaperColor
+colorscheme spacegray"OceanicNext
 let g:solarized_bold=0    "default value is 1
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_termtrans = 1
@@ -76,7 +76,7 @@ set background=dark
 
 " Theme properties
 " Airline
-let g:airline_theme = 'papercolor'
+let g:airline_theme = 'base16'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -101,7 +101,7 @@ let g:syntastic_enable_signs=1
 
 "Property for emmet
 let g:user_emmet_install_global = 1
-let g:user_emmet_expandabbr_key = '<c-r>'
+let g:user_emmet_expandabbr_key = '<c-j>'
 let g:use_emmet_complete_tag = 1
 autocmd FileType html,css EmmetInstall
 
@@ -130,8 +130,8 @@ let g:AutoPairsShortcutbackinsert = '<M-b>'
 
 " let coffee_indent_keep_current = 1
 " autocmd FileType litcoffee runtime ftplugin/coffee.vim
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
-autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+" autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+" autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
 set completeopt=menu,menuone,longest
 set pumheight=15
@@ -139,13 +139,14 @@ set pumheight=15
 let g:SuperTabDefaultCompletionType = "context"
 
 " Disable auto popup, use <Tab> to autocomplete
-let g:clang_complete_auto = 1
+" let g:clang_complete_auto = 1
 " Show clang errors in the quickfix window
-let g:clang_complete_copen = 1
+" let g:clang_complete_copen = 1
 
 autocmd! bufwritepost vimrc source %
 autocmd! bufwritepost .vimrc source %
-let g:PaperColor_Light_CursorLine = "#dfdfff"
+
+let g:enable_bold_font = 1
 
 " let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_faster = 1

@@ -3,6 +3,6 @@ gtk-theme-name = "Turquoise Nights II"
 gtk-font-name = "DejaVu Sans Mono for Powerline 10"
 
 style "vimfix" {
-  bg[NORMAL] = "#252c31"
+  bg[NORMAL] = "#24333D"
 }
 widget "vim-main-window.*GtkForm" style "vimfix"

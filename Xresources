@@ -1,6 +1,6 @@
 ! URXVT
 URxvt*termName:                       rxvt-256color
-URxvt.font: xft:Dejavu Sans Mono for Powerline:size=10
+URxvt.font: xft:Dejavu Sans Mono for Powerline:size=11
 ! Padding
 URxvt.internalBorder:0
 URxvt.externalBorder:0

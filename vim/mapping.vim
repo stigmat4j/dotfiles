@@ -34,8 +34,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Switch between buffers
-noremap <TAB> :bn<CR>
-noremap <C-k> :bp<CR>
+nnoremap <TAB> :bn<CR>
+nnoremap <C-TAB> :bp<CR>
 " close buffer
 nmap <leader>d :bwipeout<CR>
 " close all buffers
@@ -79,3 +79,5 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
+map <leader>o :CtrlP ./src/reducers/<CR>

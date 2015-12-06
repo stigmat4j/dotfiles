@@ -63,11 +63,11 @@ if has('gui')
   set guioptions-=T
   set guioptions-=m
   set guioptions-=e
-  set guifont=Dejavu\ Sans\ Mono\ for\ Powerline\ 9
+  set guifont=Dejavu\ Sans\ Mono\ for\ Powerline\ 10
 endif
 
 " Theme properties
-colorscheme spacegray"OceanicNext
+colorscheme OceanicNext
 let g:solarized_bold=0    "default value is 1
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_termtrans = 1
@@ -97,7 +97,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'"
 
 " Syntastic
 let g:syntastic_enable_signs=1
-" let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 "Property for emmet
 let g:user_emmet_install_global = 1
@@ -149,4 +149,5 @@ autocmd! bufwritepost .vimrc source %
 let g:enable_bold_font = 1
 
 " let g:indentLine_color_gui = '#A4E57E'
+let g:indentLine_char = '┆'
 let g:indentLine_faster = 1

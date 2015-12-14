@@ -101,9 +101,9 @@ let g:airline_powerline_fonts = 1
 " let g:airline_left_sep = ''
 " let g:airline_right_sep = ''
 
-let g:airline_enable_fugitive=1
-let g:airline_enable_syntastic=1
-let g:airline_enable_bufferline=1
+" let g:airline_enable_fugitive=1
+" let g:airline_enable_syntastic=1
+" let g:airline_enable_bufferline=1
 
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#fnamemod = ':t'"
@@ -114,7 +114,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'"
 
 " Syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 
 "Property for emmet
 let g:user_emmet_install_global = 1

@@ -20,7 +20,6 @@ set scrolloff=3
 set showcmd
 set wildmenu
 set hidden
-set wildmenu
 set wcm=<TAB>
 set wildmode=list:longest,full
 set visualbell
@@ -32,6 +31,24 @@ set laststatus=2
 set relativenumber
 set noundofile
 set ignorecase
+
+set mouse=a                 " Automatically enable mouse usage
+set mousehide               " Hide the mouse cursor while typing
+
+highlight clear SignColumn      " SignColumn should match background for
+" things like vim-gitgutter
+
+if has('statusline')
+  set laststatus=2
+
+  " Broken down into easily includeable segments
+  set statusline=%<%f\                     " Filename
+  set statusline+=%w%h%m%r                 " Options
+  set statusline+=%{fugitive#statusline()} " Git Hotness
+  set statusline+=\ [%{&ff}/%Y]            " Filetype
+  set statusline+=\ [%{getcwd()}]          " Current dir
+  set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+endif
 
 set wildignore+=*/bower_components/*,*/node_modules/*
 

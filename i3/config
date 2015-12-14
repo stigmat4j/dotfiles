@@ -5,9 +5,9 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-# exec --no-startup-id xrandr --output eDP1 --primary --auto --above HDMI1
-set $OUTPUT_E eDP1
-set $OUTPUT_I HDMI1
+# exec --no-startup-id xrandr --output DP2 --primary --auto --above HDMI2
+set $OUTPUT_E DP2
+set $OUTPUT_I HDMI2
 set $i3_path /home/max/.i3
 set $pictures_folder /home/max/Pictures
 
@@ -199,34 +199,34 @@ mode "resize" {
 # when pressing left, the window is resized so that it has
 # more space on its left
 
-	bindsym j resize shrink left 10 px or 10 ppt
-		bindsym Shift+J resize grow   left 10 px or 10 ppt
+  bindsym j resize shrink left 10 px or 10 ppt
+    bindsym Shift+J resize grow   left 10 px or 10 ppt
 
-		bindsym k resize shrink down 10 px or 10 ppt
-		bindsym Shift+K resize grow   down 10 px or 10 ppt
+    bindsym k resize shrink down 10 px or 10 ppt
+    bindsym Shift+K resize grow   down 10 px or 10 ppt
 
-		bindsym l resize shrink up 10 px or 10 ppt
-		bindsym Shift+L resize grow   up 10 px or 10 ppt
+    bindsym l resize shrink up 10 px or 10 ppt
+    bindsym Shift+L resize grow   up 10 px or 10 ppt
 
-		bindsym semicolon resize shrink right 10 px or 10 ppt
-		bindsym Shift+colon resize grow   right 10 px or 10 ppt
+    bindsym semicolon resize shrink right 10 px or 10 ppt
+    bindsym Shift+colon resize grow   right 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-		bindsym Left resize shrink left 10 px or 10 ppt
-		bindsym Shift+Left resize grow   left 10 px or 10 ppt
+    bindsym Left resize shrink left 10 px or 10 ppt
+    bindsym Shift+Left resize grow   left 10 px or 10 ppt
 
-		bindsym Down resize shrink down 10 px or 10 ppt
-		bindsym Shift+Down resize grow   down 10 px or 10 ppt
+    bindsym Down resize shrink down 10 px or 10 ppt
+    bindsym Shift+Down resize grow   down 10 px or 10 ppt
 
-		bindsym Up resize shrink up 10 px or 10 ppt
-		bindsym Shift+Up resize grow   up 10 px or 10 ppt
+    bindsym Up resize shrink up 10 px or 10 ppt
+    bindsym Shift+Up resize grow   up 10 px or 10 ppt
 
-		bindsym Right resize shrink right 10 px or 10 ppt
-		bindsym Shift+Right resize grow   right 10 px or 10 ppt
+    bindsym Right resize shrink right 10 px or 10 ppt
+    bindsym Shift+Right resize grow   right 10 px or 10 ppt
 
 # back to normal: Enter or Escape
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 # bindsym $mod+m         exec xrandr --output HDMI1 --off
 # bindsym $mod+shift+m   exec xrandr --output HDMI1 --auto --right-of LVDS1
@@ -236,15 +236,15 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	status_command i3blocks -c ~/.i3/i3blocks.conf
-	position top
-	colors {
-	  background #1d1f21
-	  focused_workspace  #BB9607 #BB9607 #000000
-	  active_workspace   #000000 #264348 #ffffff
-	  inactive_workspace #152834 #152834 #666666
-	  urgent_workspace   #2f343a #900000 #ffffff
-	}
+  status_command i3blocks -c ~/.i3/i3blocks.conf
+    position top
+    colors {
+      background #1d1f21
+        focused_workspace  #BB9607 #BB9607 #000000
+        active_workspace   #000000 #264348 #ffffff
+        inactive_workspace #152834 #152834 #666666
+        urgent_workspace   #2f343a #900000 #ffffff
+    }
 }
 
 client.focused          #44bbff #3276E8 #ffffff #cccccc
@@ -254,8 +254,9 @@ client.urgent           #2f343a #900000 #ffffff #900000
 
 # Startup section
 exec --no-startup-id feh --bg-scale $HOME/.i3/bg.jpg
-# exec xrandr --output $OUTPUT_E --auto --above $OUTPUT_I
-exec --no-startup-id xrandr --output $OUTPUT_E --auto --left-of $OUTPUT_I
+exec  --no-startup-id xrandr --output HDMI2 --auto --left-of DP2
+# exec xrandr --output $OUTPUT_E --auto --above --output $OUTPUT_I
+# exec --no-startup-id xrandr --output $OUTPUT_E --rotate left
 # workspace "" output $OUTPUT_E
 # workspace "" output $OUTPUT_I
 # workspace "" output $OUTPUT_E

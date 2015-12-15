@@ -33,7 +33,7 @@ set noundofile
 set ignorecase
 
 set mouse=a                 " Automatically enable mouse usage
-set mousehide               " Hide the mouse cursor while typing
+" set mousehide               " Hide the mouse cursor while typing
 
 highlight clear SignColumn      " SignColumn should match background for
 " things like vim-gitgutter
@@ -98,15 +98,11 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_powerline_fonts = 1
-" let g:airline_left_sep = ''
-" let g:airline_right_sep = ''
-
-" let g:airline_enable_fugitive=1
-" let g:airline_enable_syntastic=1
-" let g:airline_enable_bufferline=1
 
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#fnamemod = ':t'"
+let g:syntastic_error_symbol = "•"
+let g:syntastic_warning_symbol = "⚡"
 
 " Auto Pair
 " let g:AutoPairsFlymode = 1
@@ -114,7 +110,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'"
 
 " Syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers = ['eslint', 'jshint']
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:syntastic_javascript_checkers = ['eslint']
 
 "Property for emmet
 let g:user_emmet_install_global = 1

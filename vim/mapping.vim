@@ -85,4 +85,3 @@ map <leader>o :CtrlP ./src/reducers/<CR>
 " Edit and source the vimrc
 nnoremap <leader>ve :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-

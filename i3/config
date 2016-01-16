@@ -254,7 +254,7 @@ client.urgent           #2f343a #900000 #ffffff #900000
 
 # Startup section
 exec --no-startup-id feh --bg-scale $HOME/.i3/bg.jpg
-exec  --no-startup-id xrandr --output HDMI2 --auto --left-of DP2
+exec --no-startup-id xrandr --output DP2 --rotate normal --right-of HDMI2
 # exec xrandr --output $OUTPUT_E --auto --above --output $OUTPUT_I
 # exec --no-startup-id xrandr --output $OUTPUT_E --rotate left
 # workspace "" output $OUTPUT_E

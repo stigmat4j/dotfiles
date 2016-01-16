@@ -84,7 +84,7 @@ if has('gui')
 endif
 
 " Theme properties
-colorscheme OceanicNext
+colorscheme colorsbox-material "OceanicNext
 let g:solarized_bold=0    "default value is 1
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_termtrans = 1
@@ -115,7 +115,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 "Property for emmet
 let g:user_emmet_install_global = 1
-let g:user_emmet_expandabbr_key = '<c-j>'
+let g:user_emmet_expandabbr_key = '<c-g>'
 let g:use_emmet_complete_tag = 1
 autocmd FileType html,css EmmetInstall
 

@@ -54,6 +54,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin
 
 source $ZSH/oh-my-zsh.sh
 source ~/.nvm/nvm.sh
+export ANDROID_HOME=/opt/android-sdk
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

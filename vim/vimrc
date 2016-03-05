@@ -165,3 +165,4 @@ let g:enable_bold_font = 1
 " let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_char = '┆'
 let g:indentLine_faster = 1
+let g:neocomplete#enable_at_startup = 1

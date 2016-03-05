@@ -21,7 +21,8 @@ URxvt*foreground: #eeeeec
 urxvt*fading:             20
 urxvt*visualBell:         true
 ! urxvt*background: rgba:1111/1111/1111/dddd
-urxvt*background: #1d1f21
+/* urxvt*background: #1d1f21 */
+urxvt*background: #273238
 
 
 ! tangoesque scheme

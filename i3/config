@@ -12,8 +12,8 @@ set $i3_path /home/max/.i3
 set $pictures_folder /home/max/Pictures
 
 # workspaces
-set $w1
-set $w2
+set $w1 
+set $w2 
 set $w3
 set $w4
 set $w5
@@ -152,8 +152,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace ""
-bindsym $mod+2 workspace ""
+bindsym $mod+1 workspace $w1
+bindsym $mod+2 workspace $w2
 bindsym $mod+3 workspace ""
 bindsym $mod+4 workspace ""
 bindsym $mod+5 workspace ""
@@ -164,8 +164,8 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace ""
-bindsym $mod+Shift+2 move container to workspace ""
+bindsym $mod+Shift+1 move container to workspace $w1
+bindsym $mod+Shift+2 move container to workspace $w2
 bindsym $mod+Shift+3 move container to workspace ""
 bindsym $mod+Shift+4 move container to workspace ""
 bindsym $mod+Shift+5 move container to workspace ""
@@ -239,11 +239,13 @@ bar {
   status_command i3blocks -c ~/.i3/i3blocks.conf
     position top
     colors {
-      background #1d1f21
-        focused_workspace  #BB9607 #BB9607 #000000
-        active_workspace   #000000 #264348 #ffffff
-        inactive_workspace #152834 #152834 #666666
-        urgent_workspace   #2f343a #900000 #ffffff
+        background #032E46
+        statusline #032E46
+        
+        focused_workspace  #032E46 #032E46 #FFFFFF
+        active_workspace   #032E46 #032E46 #FFFFFF
+        inactive_workspace #032E46 #032E46 #008891
+        urgent_workspace   #2F343A #900000 #FFFFFF
     }
 }
 
@@ -254,7 +256,7 @@ client.urgent           #2f343a #900000 #ffffff #900000
 
 # Startup section
 exec --no-startup-id feh --bg-scale $HOME/.i3/bg.jpg
-exec --no-startup-id xrandr --output DP2 --rotate normal --right-of HDMI2
+exec --no-startup-id xrandr --output HDMI2 --rotate normal --right-of DP2
 # exec xrandr --output $OUTPUT_E --auto --above --output $OUTPUT_I
 # exec --no-startup-id xrandr --output $OUTPUT_E --rotate left
 # workspace "" output $OUTPUT_E

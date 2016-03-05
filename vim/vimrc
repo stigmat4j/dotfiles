@@ -84,7 +84,7 @@ if has('gui')
 endif
 
 " Theme properties
-colorscheme colorsbox-material "OceanicNext
+colorscheme onedark "OceanicNext
 let g:solarized_bold=0    "default value is 1
 let g:solarized_termcolors=256    "default value is 16
 let g:solarized_termtrans = 1
@@ -93,7 +93,7 @@ set background=dark
 
 " Theme properties
 " Airline
-let g:airline_theme = 'base16'
+let g:airline_theme = 'onedark'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -162,7 +162,9 @@ autocmd! bufwritepost .vimrc source %
 
 let g:enable_bold_font = 1
 
-" let g:indentLine_color_gui = '#A4E57E'
+" let g:indentLine_color_gui = '#ecf0f1'
 let g:indentLine_char = '┆'
 let g:indentLine_faster = 1
+
 let g:neocomplete#enable_at_startup = 1
+let g:colorizer_startup = 1

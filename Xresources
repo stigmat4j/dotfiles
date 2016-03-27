@@ -1,6 +1,6 @@
 ! URXVT
 URxvt*termName:                       rxvt-256color
-URxvt.font: xft:Dejavu Sans Mono for Powerline:size=11
+URxvt.font: xft:Dejavu Sans Mono for Powerline:size=12
 ! Padding
 URxvt.internalBorder:0
 URxvt.externalBorder:0
@@ -15,7 +15,7 @@ URxvt.scrollBar_right:    yes
 URxvt.scrollBar_floating: False
 URxvt.scrollstyle:        Next
 
-! URxvt*background: #2e3436
+URxvt*background: #2e3436
 URxvt*foreground: #eeeeec
 ! URxvt*cursorColor: #eeeeec
 urxvt*fading:             20
@@ -26,10 +26,10 @@ urxvt*background: #273238
 
 
 ! tangoesque scheme
-! *background: #111111
-! *foreground: #babdb6
+/* *background: #111111 */
+/* *foreground: #babdb6 */
 ! Black (not tango) + DarkGrey
-*color0:  #000000
+*color0:  #2B8BD2
 *color8:  #555753
 ! DarkRed + Red
 *color1:  #ff6565

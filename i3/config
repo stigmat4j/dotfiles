@@ -12,11 +12,11 @@ set $i3_path /home/max/.i3
 set $pictures_folder /home/max/Pictures
 
 # workspaces
-set $w1 
-set $w2 
-set $w3
-set $w4
-set $w5
+set $w1  
+set $w2 
+set $w3 
+set $w4 
+set $w5 
 set $w6
 set $w7
 set $w8
@@ -29,7 +29,7 @@ set $w0
 
 set $mod Mod4
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:DejaVu Sans Mono for Powerline 8, FontAwesome 8
+font pango:DejaVu Sans Mono for Powerline 10, FontAwesome 10
 bindsym $mod+m bar hidden_state toggle
 
 # Toggle between hide state and show state
@@ -154,9 +154,9 @@ bindsym $mod+a focus parent
 # switch to workspace
 bindsym $mod+1 workspace $w1
 bindsym $mod+2 workspace $w2
-bindsym $mod+3 workspace ""
-bindsym $mod+4 workspace ""
-bindsym $mod+5 workspace ""
+bindsym $mod+3 workspace $w3
+bindsym $mod+4 workspace $w4
+bindsym $mod+5 workspace $w5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -166,9 +166,9 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $w1
 bindsym $mod+Shift+2 move container to workspace $w2
-bindsym $mod+Shift+3 move container to workspace ""
-bindsym $mod+Shift+4 move container to workspace ""
-bindsym $mod+Shift+5 move container to workspace ""
+bindsym $mod+Shift+3 move container to workspace $w3
+bindsym $mod+Shift+4 move container to workspace $w4
+bindsym $mod+Shift+5 move container to workspace $w5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -239,13 +239,21 @@ bar {
   status_command i3blocks -c ~/.i3/i3blocks.conf
     position top
     colors {
-        background #032E46
-        statusline #032E46
-        
-        focused_workspace  #032E46 #032E46 #FFFFFF
-        active_workspace   #032E46 #032E46 #FFFFFF
-        inactive_workspace #032E46 #032E46 #008891
-        urgent_workspace   #2F343A #900000 #FFFFFF
+
+        statusline #999999
+        background #131D24
+
+        focused_workspace #232D34 #232D34 #93AE03
+        active_workspace #232D34 #232D34 #999999
+        inactive_workspace #131D24 #131D24 #999999
+        urgent_workspace #999999 #999999 #B33A3A
+      # background #032E46
+      # statusline #032E46
+
+      # focused_workspace  #032E46 #032E46 #FFFFFF
+      # active_workspace   #032E46 #032E46 #FFFFFF
+      # inactive_workspace #032E46 #032E46 #008891
+      # urgent_workspace   #2F343A #900000 #FFFFFF
     }
 }
 
@@ -257,9 +265,11 @@ client.urgent           #2f343a #900000 #ffffff #900000
 # Startup section
 exec --no-startup-id feh --bg-scale $HOME/.i3/bg.jpg
 exec --no-startup-id xrandr --output HDMI2 --rotate normal --right-of DP2
-# exec xrandr --output $OUTPUT_E --auto --above --output $OUTPUT_I
-# exec --no-startup-id xrandr --output $OUTPUT_E --rotate left
-# workspace "" output $OUTPUT_E
-# workspace "" output $OUTPUT_I
-# workspace "" output $OUTPUT_E
 
+gaps inner 2
+smart_gaps on
+# smart_borders on
+
+# bindsym Shift+plus  gaps outer all plus 5
+# bindsym Shift+minus gaps outer all minus 5
+# bindsym Shift+0     gaps outer all set 0

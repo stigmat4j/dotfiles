@@ -41,4 +41,5 @@ Plug 'joshdick/onedark.vim'
 Plug 'joshdick/airline-onedark.vim'
 Plug 'lilydjwg/colorizer'
 Plug 'easysid/mod8.vim'
+Plug 'jacoborus/tender.vim'
 call plug#end()
